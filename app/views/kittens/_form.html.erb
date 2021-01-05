@@ -11,6 +11,20 @@
     </div>
   <% end %>
 
+  <%= form.label :name, "Cat name" %>
+  <%= form.text_field :name %>
+
+  <%= form.label :age, "Cat age" %>
+  <%= form.number_field :age, in: 1..30 %>
+
+
+  <%= form.label :cuteness, "Cat cuteness" %>
+  <%= form.number_field :cuteness, in: 1..10 %>
+
+  <%= form.label :cuteness, "Cat softness" %>
+  <%= form.number_field :softness, in: 1..10 %>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

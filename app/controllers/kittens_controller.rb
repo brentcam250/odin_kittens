@@ -69,6 +69,8 @@ class KittensController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kitten_params
-      params.fetch(:kitten, {})
+      params.require(:kitten).permit(:name, :age, :cuteness, :softness)
+      # params.require(:flight).permit(:from_airport_id, :to_airport_id, :departure_date, :num_passengers, :departure_time, :flight_date_formatted)
+
     end
 end
